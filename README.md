@@ -1,6 +1,12 @@
-# MATLAB Video Analysis Guide
+# Setup
 
-This guide explains the steps to analyze videos in MATLAB for eye movement analysis.
+**NOTE:** Must have [Anaconda](https://www.anaconda.com/download) and Python installed.
+
+## Clone GitHub Repo
+
+In terminal or anaconda prompt, enter:
+
+''' git clone https://github.com/ZachPetroff/saccade_detector.git '''
 
 ## Opening the MATLAB File
 
