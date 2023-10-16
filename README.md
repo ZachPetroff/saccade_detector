@@ -44,13 +44,13 @@ pip install -r requirements.txt
     conda activate sac_det
     ```
     
--Run GUI code (**Update path to location of subject exports**):
+- Run GUI code (**update path before running**):
    
     ```
     python sac_det2.py 2023_03_27/khfn/exports/000/ 
     '''
         
--To view changes to the plot based on annotations, repeat steps a-c, then type `dynamic_plot_script.py` and press Enter.
+- To view changes to the plot based on annotations, repeat steps a-c, then type `dynamic_plot_script.py` and press Enter.
 
 ## Coding Tools
 
