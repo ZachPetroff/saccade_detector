@@ -1,0 +1,5 @@
+pandas
+numpy
+tk
+opencv-python
+pillow
