@@ -18,11 +18,11 @@ This guide explains the steps to analyze videos in MATLAB for eye movement analy
 ## Using Anaconda for Further Analysis
 
 5. Open Anaconda:
-    a. Type `cd Downloads` and press Enter.
-    b. Type `cd saccade_detector` and press Enter.
-    c. Type `conda activate sac_det` and press Enter.
-    d. Type `python sac_det2.py F:\InfantSceneData(3_22_23)/2023_03_27/khfn/exports/000/` (change this to match the subject code and date) and press Enter.
-    e. To view changes to the plot based on annotations, repeat steps a-c, then type `dynamic_plot_script.py` and press Enter.
+    - Type `cd Downloads` and press Enter.
+    - Type `cd saccade_detector` and press Enter.
+    - Type `conda activate sac_det` and press Enter.
+    - Type `python sac_det2.py F:\InfantSceneData(3_22_23)/2023_03_27/khfn/exports/000/` (change this to match the subject code and date) and press Enter.
+    - To view changes to the plot based on annotations, repeat steps a-c, then type `dynamic_plot_script.py` and press Enter.
 
 ## Coding Tools
 
