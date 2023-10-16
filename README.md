@@ -30,25 +30,26 @@ pip install -r requirements.txt
 
 # Running GUI
 
-    - Open terminal (Mac) or anaconda prompt (Windows).
-    - Navigate to saccade detector folder:
-   
-```
-cd saccade_detector
-```
+- Open terminal (Mac) or anaconda prompt (Windows).
+- Navigate to saccade detector folder:
+       
+    ```
+    cd saccade_detector
+    ```
 
-    - Activate virtual environment:
+- Activate virtual environment:
    
-```
-conda activate sac_det
-```
-    -Run GUI code (**Update path to location of subject exports**):
-   
-```
-python sac_det2.py 2023_03_27/khfn/exports/000/ 
-'''
+    ```
+    conda activate sac_det
+    ```
     
-    -To view changes to the plot based on annotations, repeat steps a-c, then type `dynamic_plot_script.py` and press Enter.
+-Run GUI code (**Update path to location of subject exports**):
+   
+    ```
+    python sac_det2.py 2023_03_27/khfn/exports/000/ 
+    '''
+        
+-To view changes to the plot based on annotations, repeat steps a-c, then type `dynamic_plot_script.py` and press Enter.
 
 ## Coding Tools
 
