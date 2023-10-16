@@ -6,7 +6,7 @@
 
 In terminal or anaconda prompt, enter:
 
-''' git clone https://github.com/ZachPetroff/saccade_detector.git '''
+```git clone https://github.com/ZachPetroff/saccade_detector.git```
 
 ## Opening the MATLAB File
 
