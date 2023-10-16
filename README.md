@@ -31,6 +31,7 @@ pip install -r requirements.txt
 # Running GUI
 
 - Open terminal (Mac) or anaconda prompt (Windows).
+
 - Navigate to saccade detector folder:
        
     ```
