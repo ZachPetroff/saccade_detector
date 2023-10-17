@@ -84,3 +84,5 @@ pip install -r requirements.txt
    - Camera or Tracking Error: If the dot and red/blue lines disappear, it's likely an error. Click the 'record untrackable' button.
    - Lost Tracking with Data: If the dot disappears but the red/blue lines still provide data, grade the movement based on the graphs.
    - Vergence Movement: If the red and blue lines cross horizontally, it's likely a vergence movement.
+
+### For More Information, Open the GUI_saccade PDF
