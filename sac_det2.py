@@ -150,6 +150,7 @@ def track_untrackable():
         untrackable = False
         untrack_times[1] = time
         nt_df = pd.read_csv(NO_TRACKING, index_col=[0])
+        nt_df = nt_df.sort_values(by='Start Time')
         sts = list(nt_df['Start Time'])
         ets = list(nt_df['Stop Time'])
         eyes = list(nt_df['Eye'])
@@ -174,6 +175,7 @@ def undetected_ss():
         undetected = False
         undetected_times[1] = time
         undetected_df = pd.read_csv(UNDETECTED, index_col=[0])
+        undetected_df = undetected_df.sort_values(by='Start Time')
         un_sts = list(undetected_df['Start Time'])
         un_ets = list(undetected_df['Stop Time'])
         un_types = list(undetected_df['Type'])
@@ -191,6 +193,7 @@ def delete_untrackable():
         return
     ntlist.delete(del_item[0])
     nt_df = pd.read_csv(NO_TRACKING,index_col=[0])
+    nt_df = nt_df.sort_values(by='Start Time')
     sts = list(nt_df['Start Time'])
     ets = list(nt_df['Stop Time'])
     eyes = list(nt_df['Eye'])
@@ -217,6 +220,7 @@ def delete_undetected():
         return
     undetectedlist.delete(del_item[0])
     undetected_df = pd.read_csv(UNDETECTED,index_col=[0])
+    undetected_df = undetected_df.sort_values(by='Start Time')
     sts = list(undetected_df['Start Time'])
     ets = list(undetected_df['Stop Time'])
     types = list(undetected_df['Type'])
@@ -232,6 +236,7 @@ def score():
 
     pred = score_var.get()
     score_df = pd.read_csv(SCORES, index_col=[0])
+    score_df = score_df.sort_values(by='Time')
     score_times = list(score_df['Time'])
     scores = list(score_df['Score'])
     eyes = list(score_df['Eye'])
@@ -257,6 +262,7 @@ def delete_score():
         return
     scorelist.delete(del_item[0])
     score_df = pd.read_csv(SCORES, index_col=[0])
+    score_df = score_df.sort_values(by='Start Time')
     score_times = list(score_df['Time'])
     scores = list(score_df['Score'])
     eyes = list(score_df['Eye'])
@@ -494,6 +500,7 @@ nt_lab = tk.Label(root,textvariable=nt_var)
 nt_lab.grid(row=4,column=0,padx=1,sticky='w')
 
 nt_df = pd.read_csv(NO_TRACKING, index_col=[0])
+nt_df = nt_df.sort_values(by='Start Time')
 sts = list(nt_df['Start Time'])
 ets = list(nt_df['Stop Time'])
 eyes = list(nt_df['Eye'])
@@ -512,6 +519,7 @@ score_lab = tk.Label(root,textvariable=score_var)
 score_lab.grid(row=4,column=0,sticky='e')
 
 score_df = pd.read_csv(SCORES, index_col=[0])
+score_df = score_df.sort_values(by='Time')
 score_times = list(score_df['Time'])
 scores = list(score_df['Score'])
 score_eyes = list(score_df['Eye'])
@@ -565,7 +573,7 @@ undetected = False
 eye_movement_var = tk.StringVar(root)
 eye_movement_var.set("Saccade") # default value
 
-eye_movement_menu = tk.OptionMenu(root, eye_movement_var, "Saccade", "Pursuit", "Gaze", "Fixation", command=em_menu)
+eye_movement_menu = tk.OptionMenu(root, eye_movement_var, "Saccade", "Pursuit", "Gaze", "Fixation", "VOR", "Vergence", command=em_menu)
 eye_movement_menu.grid(row=4, column=0, padx=int(video_width/2)-175, sticky='w')
 
 undetected_button = ttk.Button(root, text='Record Undetected',command=undetected_ss)
@@ -573,6 +581,7 @@ undetected_button['style'] = 'Emergency.TButton'
 undetected_button.grid(row=4, column=0)
 
 undetected_df = pd.read_csv(UNDETECTED, index_col=[0])
+undetected_df = undetected_df.sort_values(by='Start Time')
 undetected_sts = list(undetected_df['Start Time']) 
 undetected_ets = list(undetected_df['Stop Time'])
 undetected_types = list(undetected_df['Type'])
@@ -612,4 +621,4 @@ root.mainloop()
 
 # Release the video capture and destroy any OpenCV windows
 cap.release()
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()  
