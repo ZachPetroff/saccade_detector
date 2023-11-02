@@ -80,10 +80,10 @@ y_gaze = gaze.norm_pos_y;
 
 % remove gaze data outside of the standardized 0 to 1 range (outside of
 % world camera range)
-x_bool = x_gaze > 1 | x_gaze < 0;
-y_bool = y_gaze > 1 | y_gaze < 0;
-x_gaze(x_bool) = NaN;
-y_gaze(y_bool) = NaN;
+%x_bool = x_gaze > 1 | x_gaze < 0;
+%y_bool = y_gaze > 1 | y_gaze < 0;
+%x_gaze(x_bool) = NaN;
+%y_gaze(y_bool) = NaN;
 
 x_gazePix = x_gaze * 1280; % pixel space
 y_gazePix = y_gaze * 720;
