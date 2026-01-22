@@ -41,7 +41,7 @@ pip install -r requirements.txt
 - Activate virtual environment:
    
     ```
-    conda activate sac_det
+    conda activate saccade_detector
     ```
     
 - Run GUI code (**update path before running**):
